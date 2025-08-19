@@ -1,9 +1,8 @@
 import java.util.Scanner;
 public class Largest_ele{
-  public static void main(String[] args){
+public static void main(String[] args){
     int n;
-    int min;
-    Scanner sc=new Scanner(System.in);
+   Scanner sc=new Scanner(System.in);
     System.out.println("Enetr the size of arr:");
     n=sc.nextInt();
     int[] arr=new int[n];
@@ -11,13 +10,15 @@ public class Largest_ele{
     for(int i=0;i<n;i++){
     arr[i]=sc.nextInt();
     }
-  for(int j=0;j<n;j++){
-    if(arr[j]<arr[j+1]){
-      min =arr[j+1];
+  
+
+    int largest=arr[0];
+    for(int j=0;j<n;j++){
+    if(arr[j]>largest){
+    largest=arr[j];
     }
   }
-    
-  }
-}
+  System.out.println("the largest ele of array:"+largest);
+}}
 
 
