@@ -19,7 +19,7 @@ public class Bubble_sort {
     for(int i=0;i<n;i++){
     arr[i]=sc.nextInt();
   }
-
+System.out.println("Length: "+arr.length);
   // ** Check before sorting
   if(isSorted(arr)){
   System.out.println("Array is already sorted.");
