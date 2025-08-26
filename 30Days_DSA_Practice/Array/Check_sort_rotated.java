@@ -1,3 +1,4 @@
+// **Option 1: Simple Approach (No Exception Handling)
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -36,13 +37,17 @@ public class Check_sort_rotated {
         } else {
             System.out.println("Array is not sorted, sorting now...");
             Arrays.sort(nums);
-            for (int i = 0; i < nums.length; i++) {
-                System.out.println(nums[i]);
-            }
-            System.out.println("Sorted Array: " + Arrays.toString(nums));
-        }
 
-        // Step 2: Sort the array
+            // ** this logic also give me sorted array  but it  is not optimized way 
+          // for(int i=0;i<nums.length;i++){
+          //   System.out.println("Sorted Array: " +nums[i]);
+
+        System.out.println("Sorted Array: " + Arrays.toString(nums));
+
+        }
+      }
+
+        
     }
 
-}
+
