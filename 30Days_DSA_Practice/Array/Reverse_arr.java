@@ -35,32 +35,84 @@
 // }
 
 
-// this one is better 
+// **this one is better 
+// import java.util.Scanner;
+// public class Reverse_arr {
+
+
+// static void printarr(int new_arr[])
+// {
+//     for(int i=0;i<new_arr.length;i++)
+// {
+//     System.out.print(new_arr[i]+" ");
+// }}
+
+// static int[] Rev_arr(int arr[]) {
+//         int len = arr.length;
+//         int[] new_arr=new int[len];
+
+//         // System.out.print("Reversed array: ");
+//         //  *traverse original arr in reverse derection 
+//         // int k = 0;// **using for loop
+//         // for (int i = len - 1; i >= 0; i--) {
+//         //   new_arr[k++]=arr[i];
+//         // }
+
+//         int i=len-1,k=0;
+//         while(i>=0){
+//             i++;
+//             new_arr[k++]=arr[i--];
+//         }
+//         return new_arr;
+//     }
+
+//     public static void main(String[] args) {
+
+//         Scanner sc = new Scanner(System.in);
+//         int n;
+//         System.out.print("Enter size of array: ");
+//         n = sc.nextInt();
+//         int[] arr = new int[n];
+//         System.out.println("Enter ele in arr:");
+//         for (int i = 0; i < n; i++) {
+//             arr[i] = sc.nextInt();
+//         }
+//         // for (int i = 0; i < n; i++) {
+
+//         //     System.out.println("ele of the arr:" + arr[i]);
+//         // }
+//         int[] new_arr=Rev_arr(arr);
+//         printarr(new_arr);
+
+//     }
+    
+// }
+
+
+// ** better optimize way
+
 import java.util.Scanner;
 public class Reverse_arr {
-
-
-static void printarr(int new_arr[])
-{
-    for(int i=0;i<new_arr.length;i++)
-{
-    System.out.print(new_arr[i]+" ");
-}    
-    
+static void Swaparr(int arr[],int i,int j){
+    int temp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
 }
 
-static int[] Rev_arr(int arr[]) {
-        int len = arr.length;
-        int[] new_arr=new int[len];
-
-        // System.out.print("Reversed array: ");
-        //  *traverse original arr in reverse derection 
-        int k = 0;
-        for (int i = len - 1; i >= 0; i--) {
-          new_arr[k++]=arr[i];
-        }
-        return new_arr;
+static void Rarr(int[] arr){
+    int i=0,j=arr.length-1;
+    while(i<j){
+        Swaparr(arr, i, j);
+        i++;
+        j--;
     }
+}
+static void printarr(int arr[])
+{
+    for(int i=0;i<arr.length;i++)
+{
+    System.out.print(arr[i]+" ");
+}}
 
     public static void main(String[] args) {
 
@@ -77,9 +129,16 @@ static int[] Rev_arr(int arr[]) {
 
         //     System.out.println("ele of the arr:" + arr[i]);
         // }
-        int[] new_arr=Rev_arr(arr);
-        printarr(new_arr);
-
+        Rarr(arr);
+        
+   
+//     for(int i=0;i<arr.length;i++)
+// {
+//     System.out.print(arr[i]+" ");
+// }
+        printarr(arr);
     }
     
 }
+
+
