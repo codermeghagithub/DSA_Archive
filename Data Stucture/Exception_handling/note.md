@@ -16,6 +16,7 @@ throw:
 The "throw" keyword is used to throw an exception.
 throws
 The "throws" keyword is used to declare exceptions. It specifies that there may occur an exception in the method. It doesn't throw an exception. It is always used with method signature.
+**Java finally block** is always executed, whether an exception is handled or not. Therefore, it contains all the necessary statements that need to be printed regardless of whether an exception occurs or not.
 
 ### Exception Hierarchy in Java
 Java's exception hierarchy is built around the Throwable class:
@@ -375,3 +376,4 @@ public class CompleteExceptionSyntax {
     }
 }
 ```
+
