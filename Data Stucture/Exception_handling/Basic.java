@@ -29,17 +29,32 @@
 //     }
 // }
 
-// **
+// ** 2. Multiple Catch Blocks
+import java.util.Scanner;
 public class Basic{
   public static void main(String[] args) {
-    try {
-        String str=null;
-        int length=str.length(); //** NullPointerException
+  Scanner sc = new Scanner(System.in);
+  try {
+    // * NullPointerException
+  System.out.println("Enter a string (or press Enter to test  NullPointerException):");
+    String input = sc.nextLine();
+    String str=input.isEmpty() ?null:input; //  *make it null if user enters nothing
+    int length=str.length();  // *will throw NPE if str is null
+    System.out.println("Length = " + length);
 
-        int result = 10 / 0; // ArithmeticException  
-        int[] arr=new int[5];
-        arr[10]=20; // ArrayIndexOutOfBoundsException
+       // *ArithmeticException
+            System.out.println("Enter a number to divide 10 by:");
+            int num = sc.nextInt();
+            int result = 10 / num;
+            System.out.println("Result = " + result);
 
+            // *ArrayIndexOutOfBoundsException
+            System.out.println("Enter an index (0-4):");
+            int index = sc.nextInt();
+            int[] arr = new int[5];
+            arr[index] = 20;
+            System.out.println("arr[" + index + "] = " + arr[index]);
+            
           } catch (NullPointerException e) {
             System.out.println("Null pointer exception occurred: " +e.getMessage());
     }
@@ -51,7 +66,5 @@ public class Basic{
   } 
   catch (Exception e) {
             // Generic catch block - should be last
-            System.out.println("Some other exception occurred: " + e.getMessage());
-
-  }}
+            System.out.println("Some other exception occurred: " + e.getMessage()); }}
 }
