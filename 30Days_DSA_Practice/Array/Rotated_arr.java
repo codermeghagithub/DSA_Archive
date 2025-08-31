@@ -59,7 +59,7 @@
 // }
 
 
-// **without taking extra sPace means whout taking extra array 
+// **without taking extra sPace means without taking extra array 
 import java.util.*;
  public class Rotated_arr {
     
