@@ -10,6 +10,12 @@ https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html
 
 ## What is Exception Handling?
 Exception handling is a programming construct that allows you to catch and handle runtime errors (exceptions) that might occur during program execution. Instead of letting the program crash, you can define how to respond to specific error conditions.
+### Java Exception Keywords
+Java provides five keywords that are used to handle the exception. The following table describes each.
+throw:
+The "throw" keyword is used to throw an exception.
+throws
+The "throws" keyword is used to declare exceptions. It specifies that there may occur an exception in the method. It doesn't throw an exception. It is always used with method signature.
 
 ### Exception Hierarchy in Java
 Java's exception hierarchy is built around the Throwable class:
