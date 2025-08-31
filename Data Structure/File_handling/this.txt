@@ -1,0 +1,6 @@
+From Wikipedia, the free encyclopedia
+In the social sciences, coding is an analytical process in which data, in both quantitative form (such as questionnaires results) or qualitative form (such as interview transcripts) are categorized to facilitate analysis.
+
+One purpose of coding is to transform the data into a form suitable for computer-aided analysis. This categorization of information is an important step, for example, in preparing data for computer processing with statistical software. Prior to coding, an annotation scheme is defined. It consists of codes or tags. During coding, coders manually add codes into data where required features are identified. The coding scheme ensures that the codes are added consistently across the data set and allows for verification of previously tagged data.[1]
+
+Some studies will employ multiple coders working independently on the same data. This also minimizes the chance of errors from coding and is believed to increase the reliability of data.
