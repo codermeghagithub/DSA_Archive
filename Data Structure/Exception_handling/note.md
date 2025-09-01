@@ -377,3 +377,162 @@ public class CompleteExceptionSyntax {
 }
 ```
 
+## Java throw and throws :
+We use the throws keyword in the ,ethod declaration to declare the type of exceptions that might  occur within it .
+
+## The throw  keyword:
+It  is used to explicitly throw a single exception 
+
+
+### ✅ What is a Method Signature in Java?
+
+A method signature is the unique identifier of a method. It is the combination of:
+
+**🔹 Method name + Parameter list (types and order)**
+
+✅ It does NOT include the return type, access modifiers, throws clause, or method body.
+**Example :**
+```java
+public int add(int a, int b) {  
+    return a + b;  
+}
+```
+Method name: add
+
+Parameter list: (int, int)
+
+👉 So, the method signature is:
+
+**Output :**
+add(int, int)
+
+#### ⚠️ What’s Not Part of the Signature?
+
+* public (access modifier)
+
+* int (return type)
+
+* throws (exception declaration)
+
+### 🔄 Why Method Signature Matters?
+
+It's how the compiler differentiates between methods — especially in method overloading.
+
+Two methods in the same class cannot have the same signature.
+
+### 🔁 Example of Overloading (Different Signatures):
+```java
+void print(String msg)           // signature: print(String)
+void print(String msg, int num)  // signature: print(String, int)
+```
+
+✅ **These are valid — different parameter lists = different signatures.**
+```java
+❌ Invalid (Same Signature):
+int display(int a) { return a; }
+double display(int a) { return (double)a; } // ❌ compile error — same signature!
+```
+
+## when we wnat to create cutom ection that time 
+*  Fist give name your exception name.
+*  then extends that custum excetion 
+*  then Exception is a built-in class in Java's exception hierarchy.
+
+
+``` java
+class MeghaException extends Exception {
+    public MeghaException(String message) {
+        super(message);
+    }
+}
+```
+**Explaination**
+public class AgeException extends Exception
+
+You are creating a new exception type called AgeException.
+
+**public AgeException(String message)**
+
+This is the constructor for your custom exception.
+
+It takes a String message — an explanation of the error.
+
+**super(message);**
+
+Calls the constructor of the parent class Exception with the message.
+
+This lets Java store and later retrieve the error message when you call getMessage() on the exception.
+
+2. **Method That Throws the Custom Exception**
+public static void validateAge(int age) throws AgeException {
+
+
+**public static void validateAge(int age)**
+
+Declares a method named validateAge that takes an integer age.
+
+It's static so you can call it without creating an object.
+
+**throws AgeException**
+
+This tells Java and anyone calling this method:
+“This method might throw an AgeException, so you need to handle it.”
+
+This is required because AgeException is a checked exception (extends Exception).
+
+if (age < 18) {
+    throw new AgeException("Age must be 18 or older to register.");
+}
+
+
+if (age < 18)**
+
+Checks if the age is less than 18.
+
+**throw new AgeException("Age must be 18 or older to register.");**
+
+If the age is less than 18, you create a new instance of your custom exception with the message "Age must be 18 or older to register."
+
+You then throw that exception, meaning the normal flow of the program stops here, and control jumps to whoever catches this exception.
+### Why extends Exception?
+1. What is Exception in Java?
+
+Exception is a built-in class in Java's exception hierarchy.
+
+It represents conditions that a reasonable application might want to catch and handle.
+
+It is the superclass of all checked exceptions.
+**Even though return types are different, method signatures are the same: display(int)**
+
+ ### ✅ Can we use custom exceptions with both throw and throws in Java?
+🔹Yes, you can (and often should) use custom exceptions with both throw and throws.
+
+**They serve different purposes:**
+
+| Keyword | What it does                                              | Use with Custom Exceptions?                         |
+|---------|-----------------------------------------------------------|-----------------------------------------------------|
+| `throw` | Actually throws an instance of a custom exception         | ✅ Yes — required to throw it                       |
+| `throws`| Declares that a method might throw that custom exception  | ✅ Yes — required if it's a checked exception       |
+
+
+### ✅ Why Use throw and throws If We Already Have a catch Block?
+
+Catching exceptions (try-catch) and throwing them (throw, throws) are complementary, not replacements for each other.
+
+They serve different purposes in exception handling.
+
+🔹 1. throw — To create and send the exception
+
+You use throw to manually raise an exception — custom or built-in — when your code detects a problem.You can’t catch an exception unless it has been thrown first — either by Java or by you (throw).
+
+### 🔹 2. throws — To declare that a method might throw an exception
+
+Tells the caller of the method: “You need to handle this.”
+
+Especially required for checked exceptions (like IOException, SQLException).
+
+### 🔹 3. catch — To handle the exception
+
+Used to respond when an exception occurs.
+
+Without a throw, there would be nothing to catch.
