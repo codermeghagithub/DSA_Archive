@@ -378,7 +378,7 @@ public class CompleteExceptionSyntax {
 ```
 
 ## Java throw and throws :
-We use the throws keyword in the ,ethod declaration to declare the type of exceptions that might  occur within it .
+We use the throws keyword in the ,method declaration to declare the type of exceptions that might  occur within it .
 
 ## The throw  keyword:
 It  is used to explicitly throw a single exception 
@@ -457,14 +457,14 @@ This is the constructor for your custom exception.
 
 It takes a String message — an explanation of the error.
 
-**super(message);**
+### 👉🏻**super(message);**
 
 Calls the constructor of the parent class Exception with the message.
 
 This lets Java store and later retrieve the error message when you call getMessage() on the exception.
 
 2. **Method That Throws the Custom Exception**
-public static void validateAge(int age) throws AgeException {
+public static void validateAge(int age) throws AgeException 
 
 
 **public static void validateAge(int age)**
@@ -473,7 +473,7 @@ Declares a method named validateAge that takes an integer age.
 
 It's static so you can call it without creating an object.
 
-**throws AgeException**
+###  ❓**Throws AgeException**
 
 This tells Java and anyone calling this method:
 “This method might throw an AgeException, so you need to handle it.”
@@ -521,18 +521,34 @@ Catching exceptions (try-catch) and throwing them (throw, throws) are complement
 
 They serve different purposes in exception handling.
 
-🔹 1. throw — To create and send the exception
+### 🔹 1. Throw — To create and send the exception
 
 You use throw to manually raise an exception — custom or built-in — when your code detects a problem.You can’t catch an exception unless it has been thrown first — either by Java or by you (throw).
 
-### 🔹 2. throws — To declare that a method might throw an exception
-
-Tells the caller of the method: “You need to handle this.”
+### 🔹 2. Throws — To declare that a method might throw an exception
+Used in a method signature to declare that the method might throw one or more exceptions.Tells the caller of the method: “You need to handle this.”
 
 Especially required for checked exceptions (like IOException, SQLException).
+#### Summary: ✅
+* Use throw to throw an exception object.
+
+* Use throws to declare exceptions that a method might throw.
 
 ### 🔹 3. catch — To handle the exception
 
 Used to respond when an exception occurs.
 
 Without a throw, there would be nothing to catch.
+ 
+
+## Differences at a Glance: `throw` vs `throws` in Java
+
+| Aspect              | `throw`                                    | `throws`                                   |
+|---------------------|---------------------------------------------|--------------------------------------------|
+| **What is it?**     | Statement (inside method)                   | Declaration (in method/ctor signature)      |
+| **Purpose**         | Actually raises an exception now            | Advertises possible exceptions to callers   |
+| **Affects**         | Runtime control flow                        | Compile-time checking                       |
+| **Where used**      | Inside code blocks                          | After method/ctor parameter list            |
+| **Quantity**        | One exception object per `throw`            | Can list multiple exceptions                |
+| **Checked exceptions** | If not caught, method must declare `throws` | Required when method can let checked exceptions escape |
+| **Creates object?** | Yes (usually `new ...`)                     | No                                         |
