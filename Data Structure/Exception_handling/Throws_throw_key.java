@@ -91,41 +91,44 @@
 // }
 
 
- class NegativeRediousException extends Exception{
-  //  *toString() is a method that every class inherits from the base class Object.
-  // *Its job is to return a string representation of the object.
-
-  @Override
-  public String toString(){
-    return "Radious  cannot be nagative !";
-
-  }
-  @Override
-  public String getMessage(){
-  return "I am getMessage";
-}
-}
 
 
-public class Throws_throw_key {
-  public static double area(int r) throws NegativeRediousException{
+// **throws exception and throw both 
+//  class NegativeRediousException extends Exception{
+//   //  *toString() is a method that every class inherits from the base class Object.
+//   // *Its job is to return a string representation of the object.
 
-    if(r<0){
+//   @Override
+//   public String toString(){
+//     return "Radious  cannot be nagative !";
+
+//   }
+//   @Override
+//   public String getMessage(){
+//   return "I am getMessage";
+// }
+// }
+
+
+// public class Throws_throw_key {
+//   public static double area(int r) throws NegativeRediousException{
+
+//     if(r<0){
       
-      throw new NegativeRediousException();
-    }
-  double result =Math.PI*r*r;  // * if i provide nagative value so i use throw  
-  return result;
-  }
-  public static void main(String[] args) {
-    try {
-    double ar=area(5);
-    System.out.println(ar);
-    } 
-    catch(Exception e){
-      System.out.println("It gives exception error"+e.getMessage());
-    }
-  }}
+//       throw new NegativeRediousException();
+//     }
+//   double result =Math.PI*r*r;  // * if i provide nagative value so i use throw  
+//   return result;
+//   }
+//   public static void main(String[] args) {
+//     try {
+//     double ar=area(5);
+//     System.out.println(ar);
+//     } 
+//     catch(Exception e){
+//       System.out.println("It gives exception error"+e.getMessage());
+//     }
+//   }}
 
 
 

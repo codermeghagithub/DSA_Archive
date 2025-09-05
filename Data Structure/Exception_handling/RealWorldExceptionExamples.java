@@ -75,13 +75,16 @@ class ValidationException extends Exception {
     private String fieldName;
     private String fieldValue;
     
-    public ValidationException(String fieldName, String fieldValue, String reason) {
+    public ValidationException(String fieldName, String fieldValue, String reason) 
+    {
         super("Validation failed for field '" + fieldName + "' with value '" + fieldValue + "': " + reason);
         this.fieldName = fieldName;
         this.fieldValue = fieldValue;
     }
     
-    public String getFieldName() { return fieldName; }
+    public String getFieldName() { 
+        return fieldName;
+     }
     public String getFieldValue() { return fieldValue; }
 }
 
