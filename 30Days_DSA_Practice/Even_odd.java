@@ -79,6 +79,20 @@ public class Even_odd {
 
 
 
+
+
+// ** why usr while(l<r)
+
+// ✅ Summary (Key Point)
+
+// **while (l < r) is used because it's the simplest and safest way to scan from both ends of an array — especially when you're rearranging elements (like even/odd, 0s/1s, etc.).
+
+// You're not sorting.
+// You're not comparing values directly.
+// **You're just moving two pointers inward and swapping elements where needed.
+
+
+// *
 // **
 
 // ⚠️ So to be very clear:
