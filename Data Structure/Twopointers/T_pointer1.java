@@ -59,13 +59,13 @@ public class T_pointer1 {
 
 static void Printarr(int[] arr){
     int n=arr.length;
-    System.out.println("ARRAY:");
     // ** 1 0 0 1 0 1 1 0 0  => 0 0 0 0 0 1 1 1 1 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
-        }}
+        }
+    System.out.println();
+    }
 static void  Swap(int[] arr,int i,int j){
-    int n=arr.length;
     int temp=arr[i];
     arr[i]=arr[j];
     arr[j]=temp;
@@ -75,19 +75,18 @@ static void  Swap(int[] arr,int i,int j){
      
 static void sortZerosandOne(int[] arr){
 int n=arr.length;
-int l=0;
-int r=n-1;
+int l=0,r=n-1;
 boolean alreadySorted = true;
 for (int i = 0; i < n-1; i++) {
     if (arr[i] > arr[i + 1]) {
         alreadySorted = false;
         break;
     }}
+
 if(alreadySorted){
     System.out.println("array alredy sorted");
 return ;
 }
-if (!alreadySorted) {
     while (l < r) {
     if (arr[l] == 1 && arr[r] == 0) {
         Swap(arr, l, r);
@@ -101,20 +100,19 @@ if (!alreadySorted) {
             r--;
         }
     }
-}}
+}
   public static void main(String[] args){
     Scanner sc=new Scanner(System.in);
-    int n;
-    
     System.out.println("Enter the size:");
-    n =sc.nextInt();
+
+    int n=sc.nextInt();
     int[] arr=new int[n];
+
     System.out.println("Enter ele in arr:");
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int l=0;
-        int r=arr.length;
+        
         System.out.println("BEFORE SORTING ARRAY:");
         Printarr(arr);
         sortZerosandOne(arr);
