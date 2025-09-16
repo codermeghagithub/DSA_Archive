@@ -53,6 +53,7 @@ public class BubbleSort {
             arr[i] = sc.nextInt();
         }
         
+        
         System.out.println("Original array:");
         printArray(arr);
         
