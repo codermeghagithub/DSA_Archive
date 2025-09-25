@@ -37,7 +37,6 @@
 // ** GIVEN AN INT ARR 'A' RETURN THE PREFIX SUM/RUNNING SUM IN THE SAME ARRAY WITHOUT CREATING NEW OR ANOTHER ARR 
 
 // import java.util.Scanner;
-
 // public class Prefix_sum_arr {
 //   static void Printarr(int[] arr)
 // {
@@ -72,9 +71,7 @@
 //         Printarr(arr);
 //         System.out.println(" After PSUM_arr's ele in arr are :");
 //         int[] prefix=Prefix_arr(arr);
-//         Printarr(prefix);
-        
-        
+//         Printarr(prefix);   
 // }}
 
 
@@ -112,11 +109,11 @@ static void Prefix_arr(int[] arr){
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println(" ele in arr are :");
+    System.out.println(" ele in arr are :");
         Printarr(arr);
 
         Prefix_arr(arr);
-        System.out.print("Prefix sum array: ");
+    System.out.print("Prefix sum array: ");
         Printarr(arr);
         
         
