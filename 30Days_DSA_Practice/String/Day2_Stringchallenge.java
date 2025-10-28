@@ -61,3 +61,6 @@ System.out.println(str1);
 
 
   //**Q2 ** if i have except alphabets if i having any difit ,*^ special tipe charecter so it can be printed only do previous question 
+
+
+  
