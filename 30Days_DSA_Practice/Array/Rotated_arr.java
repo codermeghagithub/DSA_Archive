@@ -105,7 +105,7 @@ static void Reverse(int[] arr,int i,int j){
         System.out.print("Enter the k value : ");
         k = sc.nextInt();
         
-         System.out.println("Ele in arr:");
+         System.out.println("Ele in arr:");  // *1 2 3 4 5 ->k=2,size/n=5 so 1 2 3 (2nd idx) | 4 5 => arr[]=4 5 1 2 3 so means arr(n-k) to (n-1)
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i]);
         }
