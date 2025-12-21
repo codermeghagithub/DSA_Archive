@@ -1,25 +1,25 @@
 //  **HOLLOW RECTANGLE
-import java.util.Scanner;
-public class Pattern1
-{
-public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-	System.out.println("Enter the number of rows and column:");
-	int  r=sc.nextInt();
-	int c=sc.nextInt();
-	for(int i=0;i<r;i++){
-	    for(int j=0;j<c;j++){
-	        if(i==j||i==(r-1)||(j==0)||(j==c-1)){
-	        System.out.print("*");
-	        }else{
-	             System.out.print(" ");
-	        }
-	    }
-	    System.out.println("");
-	}
+// import java.util.Scanner;
+// public class Pattern1
+// {
+// public static void main(String[] args) {
+//     Scanner sc=new Scanner(System.in);
+// 	System.out.println("Enter the number of rows and column:");
+// 	int  r=sc.nextInt();
+// 	int c=sc.nextInt();
+// 	for(int i=0;i<r;i++){
+// 	    for(int j=0;j<c;j++){
+// 	        if(i==j||i==(r-1)||(j==0)||(j==c-1)){
+// 	        System.out.print("*");
+// 	        }else{
+// 	             System.out.print(" ");
+// 	        }
+// 	    }
+// 	    System.out.println("");
+// 	}
 
-}
-}
+// }
+// }
 // *
 // **
 // ***
@@ -69,3 +69,62 @@ public static void main(String[] args) {
 
 // }
 // }
+
+
+
+// import java.util.Scanner;
+
+// public class Pattern1
+// {
+// public static void main(String[] args) {
+//     Scanner sc=new Scanner(System.in);
+// 	System.out.println("Enter the number of rows and column:");
+// 	int  r=sc.nextInt();
+// 	int c=sc.nextInt();
+// //    ----*
+//     //   **
+//     //  ***
+//     // ****
+//     //*****
+// 	for(int i=1;i<=r;i++){
+	    
+// 	    for(int j=1;j<=c-i;j++){  // *i=4,j=4 4>=4 3>=4 i=3 
+	        
+// 	    System.out.print(" ");
+// 	}
+// 	for(int l=1;l<=i;l++){
+// 	   System.out.print("*");  
+// 	}
+//        System.out.println("");  
+
+
+// }
+// }}
+
+
+
+
+import java.util.Scanner;
+
+public class Pattern1
+{
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number of rows and column:");
+	int  r=sc.nextInt();
+	int c=sc.nextInt();
+
+	for(int i=1;i<=r;i++){
+	    
+	    for(int j=1;j<=r-i;j++){  // *i=4,j=4 4>=4 3>=4 i=3 
+	        
+	    System.out.print(" ");
+	}
+	for(int l=1;l<=2*i-1;l++){
+	   System.out.print("*");  
+	}
+       System.out.println("");  
+
+
+}
+}}
