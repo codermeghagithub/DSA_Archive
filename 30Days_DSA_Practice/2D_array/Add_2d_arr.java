@@ -7,10 +7,7 @@ public class Add_2d_arr
 
         // **🧠 Why Java does NOT allow this
 // int r1;   // declared
-
-
 // But you never did:
-
 // r1 = 3;   // initialized
          for(int i=0;i<sum.length;i++){
             for(int j=0;j<sum[i].length;j++){
@@ -21,6 +18,7 @@ public class Add_2d_arr
          System.out.println("") ;   
          }}
     
+// *ADD  
     // static void Addition(int[][]arr1,int r1,int c1,int[][]arr2,int r2,int c2){
     // if(r1!=r2 || c1!=c2){
     //     System.out.println("Addition not possible😔");
@@ -36,6 +34,8 @@ public class Add_2d_arr
     // Display_Matrix(sum);
   
     // }
+    
+    // *
    static void Multiply(int[][]arr1,int r1,int c1,int[][]arr2,int r2,int c2){
         if(c1!=r2){
             System.out.println("Multiplication not possible.❌");
