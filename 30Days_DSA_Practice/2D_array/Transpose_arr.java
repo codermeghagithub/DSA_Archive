@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Transpose_arr {
+    static void Display_Matrix(int[][] t_arr){
+        int c1,r1;
+        System.out.println("2Dd arr print:");
+for(int i=0;i<t_arr.length;i++){
+            for(int j=0;j<t_arr.length;j++){
+    System.out.print(t_arr[i][j]+" ");            
+            }
+      System.out.println(""); 
+      
+    }                 
+         }
+    static void Transpose(int[][]O_arr,int r1,int c1){
+        
+        int[][] t_arr=new int [r1][c1];
+        for(int i=0;i<c1;i++){
+            for(int j=0;j<r1;j++){
+                t_arr[i][j]=O_arr[j][i];
+            }
+        }
+        Display_Matrix(t_arr);
+        return;
+        
+    }
+  public static void main(String[] args){
+    Scanner sc =new Scanner(System.in);
+      System.out.print("Enter number of rows &  columns: ");
+        int r1 = sc.nextInt();
+        int c1= sc.nextInt();
+        System.out.println("Enter elements:");
+        int [][]O_arr=new int[r1][c1];
+        for(int i=0;i<r1;i++){
+            for(int j=0;j<c1;j++){
+          O_arr[i][j]=sc.nextInt();
+            }
+        }
+        Display_Matrix(O_arr);
+Transpose(O_arr,r1,c1);
+  }}

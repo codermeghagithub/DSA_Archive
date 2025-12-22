@@ -24,7 +24,7 @@ public class Add_2d_arr
     //     System.out.println("Addition not possible😔");
     //     return;
     // }
-    // int s1,s2;
+    // 
     // int[][] sum=new int[r1][c1];
     // for(int i=0;i<r1;i++){ // ROW
     //     for(int j=0;j<c1;j++){ //COLOUMN
