@@ -24,6 +24,22 @@ for(int i=0;i<t_arr.length;i++){
         return;
         
     }
+     static void Transpose_With_Optimize(int[][]O_arr,int r1,int c1){
+        
+        for(int i=0;i<c1;i++){
+            for(int j=i;j<r1;j++){
+                int temp=O_arr[i][j];
+                O_arr[i][j]=O_arr[j][i];
+                O_arr[j][i]=temp;
+            }
+        }
+        
+        
+        
+        Display_Matrix(O_arr);
+        return;
+        
+    }
   public static void main(String[] args){
     Scanner sc =new Scanner(System.in);
       System.out.print("Enter number of rows &  columns: ");
