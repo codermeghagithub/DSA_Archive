@@ -2,12 +2,10 @@
 // **FIBONACCI NUMBER
 
 import java.util.Scanner;
-
-
 public class Fibonacci {
   static int N_factorial(int m){
       int curr, pre,prep;
-   if(m==0  || m==1){  // **BASE CASE
+   if(m>=0 && m<=9){  // **BASE CASE
        return m;
    }
    
@@ -16,9 +14,7 @@ public class Fibonacci {
        pre=N_factorial(m-1);
        prep=N_factorial(m-2);
        return pre+prep; //**SELF WORK */
-   }
-
-     
+   }  
   }
   
   public static void main(String[] args) {
