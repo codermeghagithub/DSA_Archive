@@ -4,14 +4,14 @@
 import java.util.Scanner;
 public class POD {
   static int Power_of_Digit(int p,int q){
-    if(q==0){
-      return 1; 
+    if(q==0){   
+      return 1;     
     }
     // int k=pow(p,q);
-    int res=Power_of_Digit(p,q-1);
+    int res=Power_of_Digit(p,q-1);       
 return res;
   }
-  public static void main(String[] args) {
+  public static void main(String[] args) {              
     Scanner sc=new Scanner(System.in);
       System.out.println("Enter the number:");
           int p=sc.nextInt();
@@ -20,7 +20,7 @@ return res;
           
      int res= Power_of_Digit(p,q);    
 System.out.println("Power of x^y :"+res);
-  }
+  }                        
   
 }
 

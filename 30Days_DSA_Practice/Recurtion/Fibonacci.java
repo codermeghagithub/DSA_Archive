@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Fibonacci {
   static int N_factorial(int m){
       int curr, pre,prep;
-   if(m>=0 && m<=9){  // **BASE CASE
+   if(m==0 || m==1){  // **BASE CASE
        return m;
    }
    
@@ -26,4 +26,6 @@ public class Fibonacci {
 System.out.println("Fibonacci of " + m + " is: " + res);
   }
 }
+
+
 
